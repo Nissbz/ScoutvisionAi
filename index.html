@@ -5,71 +5,115 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ScoutVision AI</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
-    background-color: #0f172a;
-    color: #e2e8f0;
-    line-height: 1.6;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 80px 20px;
-  }
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 30% 20%, #1e293b 0%, #0f172a 40%, #020617 100%);
+  color: #f1f5f9;
+  line-height: 1.6;
+}
 
-  h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
-  }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 120px 24px;
+}
 
-  h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    margin-top: 80px;
-  }
+.hero {
+  text-align: center;
+  margin-bottom: 120px;
+}
 
-  p {
-    font-size: 18px;
-    color: #94a3b8;
-  }
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
 
-  .tag {
-    display: inline-block;
-    padding: 6px 12px;
-    border: 1px solid #334155;
-    border-radius: 20px;
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #38bdf8;
-  }
+h1 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
+.gradient-text {
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  .card {
-    background-color: #1e293b;
-    padding: 30px;
-    border-radius: 8px;
-  }
+.subtitle {
+  font-size: 22px;
+  color: #94a3b8;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
 
-  footer {
-    margin-top: 100px;
-    font-size: 14px;
-    color: #64748b;
-    text-align: center;
-  }
+.section {
+  margin-bottom: 120px;
+}
 
-  a {
-    color: #38bdf8;
-    text-decoration: none;
-  }
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #94a3b8;
+  max-width: 800px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.card strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+  padding-bottom: 60px;
+}
 </style>
 </head>
 
@@ -77,72 +121,78 @@
 
 <div class="container">
 
-  <div class="tag">Independent Concept Project</div>
+  <div class="hero">
+    <div class="badge">Independent Concept Project</div>
+    <h1><span class="gradient-text">ScoutVision</span> AI</h1>
+    <p class="subtitle">
+      A structured framework for cross-league player projection and transfer risk modeling.
+    </p>
+    <p class="subtitle">
+      Designed to explore predictive modeling, performance normalization, and probabilistic decision intelligence in professional recruitment environments.
+    </p>
+  </div>
 
-  <h1>ScoutVision AI</h1>
+  <div class="section">
+    <h2>The Problem</h2>
+    <p>
+      Cross-league player evaluation lacks standardized normalization, leading to distorted comparisons, inefficient scouting allocation, and mispriced transfer decisions.
+    </p>
+  </div>
 
-  <p>
-    A structured framework for cross-league player projection and transfer risk modeling.
-  </p>
+  <div class="section">
+    <h2>Framework Architecture</h2>
 
-  <p>
-    Designed to explore predictive modeling, performance normalization, and probabilistic decision intelligence in professional football recruitment.
-  </p>
+    <div class="grid">
+      <div class="card">
+        <strong>Data Integration</strong>
+        <p>Multi-source ingestion of match performance, availability data, tactical context, and league strength indicators.</p>
+      </div>
 
-  <h2>The Problem</h2>
-  <p>
-    Cross-league player evaluation lacks standardized normalization, leading to distorted comparisons, inefficient scouting allocation, and mispriced transfer decisions.
-  </p>
+      <div class="card">
+        <strong>Normalization Logic</strong>
+        <p>Adjusts player metrics across league quality and team context to enable structured comparison.</p>
+      </div>
 
-  <h2>Framework Architecture</h2>
+      <div class="card">
+        <strong>Feature Engineering</strong>
+        <p>Structured profiling of efficiency, adaptability, and consistency indicators.</p>
+      </div>
 
-  <div class="grid">
-    <div class="card">
-      <strong>Data Integration</strong>
-      <p>Multi-source ingestion of match performance, availability data, tactical context, and league strength indicators.</p>
-    </div>
+      <div class="card">
+        <strong>Probabilistic Simulation</strong>
+        <p>Projects performance ranges in target league environments rather than deterministic outcomes.</p>
+      </div>
 
-    <div class="card">
-      <strong>Normalization Logic</strong>
-      <p>Adjusts player metrics across league quality and team context to enable fair comparison.</p>
-    </div>
-
-    <div class="card">
-      <strong>Feature Engineering</strong>
-      <p>Structured profiling of efficiency, adaptability, and consistency indicators.</p>
-    </div>
-
-    <div class="card">
-      <strong>Probabilistic Simulation</strong>
-      <p>Projects performance ranges in target league environments rather than deterministic outcomes.</p>
-    </div>
-
-    <div class="card">
-      <strong>Decision Output</strong>
-      <p>Generates structured risk and projection insights to support transfer evaluation.</p>
+      <div class="card">
+        <strong>Decision Output</strong>
+        <p>Generates structured risk and projection insights to support transfer evaluation.</p>
+      </div>
     </div>
   </div>
 
-  <h2>Design Principles</h2>
-  <div class="grid">
-    <div class="card">
-      <strong>Transparency</strong>
-      <p>Preference for structured modeling over black-box prediction.</p>
-    </div>
+  <div class="section">
+    <h2>Design Principles</h2>
 
-    <div class="card">
-      <strong>Probabilistic Thinking</strong>
-      <p>Outputs framed as confidence ranges rather than fixed projections.</p>
-    </div>
+    <div class="grid">
+      <div class="card">
+        <strong>Transparency</strong>
+        <p>Preference for structured modeling over black-box prediction.</p>
+      </div>
 
-    <div class="card">
-      <strong>Risk Embedded</strong>
-      <p>Every projection incorporates performance variance and uncertainty.</p>
-    </div>
+      <div class="card">
+        <strong>Probabilistic Thinking</strong>
+        <p>Outputs framed as confidence ranges rather than fixed projections.</p>
+      </div>
 
-    <div class="card">
-      <strong>Human Judgment Central</strong>
-      <p>The framework supports — not replaces — scouting expertise.</p>
+      <div class="card">
+        <strong>Embedded Risk</strong>
+        <p>Every projection incorporates performance variance and uncertainty.</p>
+      </div>
+
+      <div class="card">
+        <strong>Human Judgment Central</strong>
+        <p>The framework supports — not replaces — scouting expertise.</p>
+      </div>
     </div>
   </div>
 
