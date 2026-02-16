@@ -1,254 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScoutVision AI</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(-45deg, #020617, #0f172a, #111827, #0f172a);
-  background-size: 400% 400%;
-  animation: gradientShift 20s ease infinite;
-  color: #f1f5f9;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-@keyframes gradientShift {
-  0% { background-position:0% 50%; }
-  50% { background-position:100% 50%; }
-  100% { background-position:0% 50%; }
-}
-
-.container {
-  max-width: 1100px;
-  margin:auto;
-  padding:120px 24px;
-}
-
-.hero {
-  text-align:center;
-  margin-bottom:140px;
-  animation: fadeIn 1.2s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity:0; transform:translateY(20px); }
-  to { opacity:1; transform:translateY(0); }
-}
-
-.badge {
-  display:inline-block;
-  padding:8px 16px;
-  border-radius:999px;
-  background:rgba(56,189,248,0.1);
-  color:#38bdf8;
-  font-size:14px;
-  margin-bottom:30px;
-  border:1px solid rgba(56,189,248,0.2);
-}
-
-h1 {
-  font-size:72px;
-  font-weight:800;
-  letter-spacing:-1px;
-  margin-bottom:20px;
-}
-
-.gradient {
-  background: linear-gradient(90deg,#38bdf8,#6366f1,#38bdf8);
-  background-size:200%;
-  animation: textFlow 6s linear infinite;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-@keyframes textFlow {
-  0% { background-position:0% }
-  100% { background-position:200% }
-}
-
-.subtitle {
-  font-size:22px;
-  color:#94a3b8;
-  max-width:750px;
-  margin:0 auto 20px;
-}
-
-.section {
-  margin-bottom:140px;
-}
-
-.section h2 {
-  font-size:40px;
-  margin-bottom:20px;
-  position:relative;
-}
-
-.section h2::after {
-  content:"";
-  display:block;
-  width:60px;
-  height:3px;
-  background:linear-gradient(90deg,#38bdf8,#6366f1);
-  margin-top:10px;
-}
-
-.section p {
-  font-size:18px;
-  color:#94a3b8;
-  max-width:900px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-
-.card {
-  background:rgba(30,41,59,0.6);
-  padding:30px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,0.05);
-  transition:0.3s ease;
-  backdrop-filter: blur(6px);
-}
-
-.card:hover {
-  transform:translateY(-8px);
-  border-color:rgba(56,189,248,0.5);
-  box-shadow:0 10px 30px rgba(56,189,248,0.15);
-}
-
-.card strong {
-  display:block;
-  margin-bottom:10px;
-  font-size:18px;
-}
-
-.divider {
-  height:1px;
-  background:rgba(255,255,255,0.08);
-  margin:100px 0;
-}
-
-footer {
-  text-align:center;
-  font-size:14px;
-  color:#64748b;
-  padding-bottom:60px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoutVision AI | Predictive Player Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #020617; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; }
+        .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
+<body class="px-6 py-12 max-w-2xl mx-auto">
 
-<body>
+    <header class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-900/30 border border-sky-500/30 text-sky-400 text-xs font-medium mb-6">
+            <i class="fas fa-microchip"></i> AI-Powered Player Projection Engine
+        </div>
+        <h1 class="text-5xl font-extrabold mb-6 gradient-text">ScoutVision AI</h1>
+        <p class="text-xl text-slate-300 font-light leading-relaxed">
+            A predictive framework designed to surface undervalued players and structure smarter transfer decisions.
+        </p>
+        <p class="mt-6 text-slate-500 text-sm">
+            Football recruitment is expensive, inefficient, and uncertain — clubs consistently overpay while hidden gems go unnoticed across leagues.
+        </p>
+    </header>
 
-<div class="container">
+    <section class="space-y-6 mb-16">
+        <div class="glass-card p-6 border-red-500/20">
+            <h3 class="text-red-400 font-bold flex items-center gap-2 mb-4">
+                <i class="fas fa-exclamation-triangle"></i> The Problem
+            </h3>
+            <ul class="space-y-4 text-slate-400 text-sm">
+                <li class="flex gap-3"><i class="fas fa-chart-line text-red-500/50 mt-1"></i> Scouting operations are expensive and yield inconsistent results.</li>
+                <li class="flex gap-3"><i class="fas fa-money-bill-wave text-red-500/50 mt-1"></i> Transfer mistakes cost clubs millions — overpaying for talent that doesn't adapt.</li>
+                <li class="flex gap-3"><i class="fas fa-magnifying-glass text-red-500/50 mt-1"></i> Undervalued players across smaller leagues go completely unnoticed.</li>
+            </ul>
+        </div>
 
-  <div class="hero">
-    <div class="badge">Independent Concept Project</div>
-    <h1><span class="gradient">ScoutVision</span> AI</h1>
-    <p class="subtitle">
-      A structured decision intelligence engine for cross-league player projection and transfer risk modeling.
-    </p>
-    <p class="subtitle">
-      Designed to support smarter recruitment decisions through normalization logic, probabilistic simulation, and embedded risk evaluation.
-    </p>
-  </div>
+        <div class="glass-card p-6 border-emerald-500/20">
+            <h3 class="text-emerald-400 font-bold flex items-center gap-2 mb-4">
+                <i class="fas fa-check-circle"></i> The Solution
+            </h3>
+            <ul class="space-y-4 text-slate-400 text-sm">
+                <li class="flex gap-3"><i class="fas fa-bolt text-emerald-500/50 mt-1"></i> Surface undervalued talent before the market catches up.</li>
+                <li class="flex gap-3"><i class="fas fa-filter text-emerald-500/50 mt-1"></i> Reduce scouting inefficiencies through automated pre-filtering.</li>
+                <li class="flex gap-3"><i class="fas fa-globe text-emerald-500/50 mt-1"></i> Cross-league normalization enables fair, context-aware comparison.</li>
+            </ul>
+        </div>
+    </section>
 
-  <div class="section">
-    <h2>The Problem</h2>
-    <p>
-      Football recruitment remains fragmented across leagues and performance environments. 
-      Clubs evaluate players using inconsistent benchmarks, leading to distorted comparisons, inefficient scouting allocation, and transfer decisions exposed to structural uncertainty.
-    </p>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="section">
-    <h2>Strategic Impact</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>Improved Capital Allocation</strong>
-        <p>Transforms recruitment evaluation into a structured probabilistic investment framework.</p>
-      </div>
-      <div class="card">
-        <strong>Cross-League Simulation</strong>
-        <p>Projects performance translation between competitive environments with contextual normalization logic.</p>
-      </div>
-      <div class="card">
-        <strong>Embedded Risk Intelligence</strong>
-        <p>Integrates availability trends, performance variance, and adaptability indicators.</p>
-      </div>
+    <div class="grid grid-cols-1 gap-4 mb-20">
+        <div class="glass-card p-8 text-center hover:bg-slate-800/50 transition-colors">
+            <i class="fas fa-dollar-sign text-3xl text-sky-400 mb-4"></i>
+            <h4 class="text-2xl font-bold mb-2">Efficiency</h4>
+            <p class="text-slate-400">Target meaningful reductions in scouting inefficiencies.</p>
+        </div>
+        <div class="glass-card p-8 text-center hover:bg-slate-800/50 transition-colors">
+            <i class="fas fa-bullseye text-3xl text-sky-400 mb-4"></i>
+            <h4 class="text-2xl font-bold mb-2">Allocation</h4>
+            <p class="text-slate-400">Improve capital allocation efficiency in transfer decisions.</p>
+        </div>
+        <div class="glass-card p-8 text-center hover:bg-slate-800/50 transition-colors">
+            <i class="fas fa-chart-area text-3xl text-sky-400 mb-4"></i>
+            <h4 class="text-2xl font-bold mb-2">Discovery</h4>
+            <p class="text-slate-400">Framework designed to surface undervalued players across leagues.</p>
+        </div>
     </div>
-  </div>
 
-  <div class="divider"></div>
+    <section class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-10">How <span class="text-sky-400">ScoutVision AI</span> Works</h2>
+        <div class="space-y-8">
+            <div class="flex gap-6">
+                <div class="flex-none w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 font-bold border border-slate-700">1</div>
+                <div>
+                    <h5 class="font-bold text-lg">Multi-Source Data Integration</h5>
+                    <p class="text-slate-400 text-sm mt-1">Aggregating match metrics, injury history, and league strength coefficients.</p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div class="flex-none w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 font-bold border border-slate-700">2</div>
+                <div>
+                    <h5 class="font-bold text-lg">Performance Normalization</h5>
+                    <p class="text-slate-400 text-sm mt-1">Standardizing performance across leagues, adjusting for team strength and tactical role.</p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div class="flex-none w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 font-bold border border-slate-700">3</div>
+                <div>
+                    <h5 class="font-bold text-lg">Feature Engineering & Profiling</h5>
+                    <p class="text-slate-400 text-sm mt-1">Advanced indicators: adaptability scores, injury risk, and pressure-consistency index.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="section">
-    <h2>Intelligence Pipeline</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>Data Integration Layer</strong>
-        <p>Aggregates match metrics, contextual team factors, and league strength coefficients.</p>
-      </div>
-      <div class="card">
-        <strong>Normalization Engine</strong>
-        <p>Adjusts player output across environments to enable structured comparison.</p>
-      </div>
-      <div class="card">
-        <strong>Feature Engineering</strong>
-        <p>Builds multidimensional player profiles across efficiency and consistency axes.</p>
-      </div>
-      <div class="card">
-        <strong>Probabilistic Simulation</strong>
-        <p>Generates performance ranges rather than deterministic projections.</p>
-      </div>
-      <div class="card">
-        <strong>Decision Output</strong>
-        <p>Produces structured risk-adjusted recruitment insights.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="section">
-    <h2>Design Principles</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>Transparency</strong>
-        <p>Structured modeling over black-box prediction.</p>
-      </div>
-      <div class="card">
-        <strong>Probabilistic Thinking</strong>
-        <p>Performance expressed as confidence ranges.</p>
-      </div>
-      <div class="card">
-        <strong>Risk Embedded by Default</strong>
-        <p>Uncertainty integrated into every projection.</p>
-      </div>
-      <div class="card">
-        <strong>Human Judgment Central</strong>
-        <p>Supports — not replaces — scouting expertise.</p>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    ScoutVision AI is an independent conceptual project exploring structured decision intelligence systems in competitive football recruitment environments.
-  </footer>
-
-</div>
+    <footer class="text-center pt-12 border-t border-slate-800">
+        <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-4">Project Context</p>
+        <p class="text-sm text-slate-400 italic mb-8">
+            ScoutVision AI is an independent conceptual project exploring structured predictive modeling in professional recruitment environments.
+        </p>
+        <div class="text-slate-600 text-xs">
+            © 2026 ScoutVision AI. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
